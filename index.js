@@ -11,6 +11,12 @@ app.get("/", async (req, res) => {
   });
 });
 
+app.get("/weather", async (req, res) => {
+  return res.status(200).json({
+    message: "the weather is sunny!",
+  });
+});
+
 app.listen(PORT, "0.0.0.0", async () => {
   console.log("Server is Spining on Port :", PORT);
 });

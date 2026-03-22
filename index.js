@@ -11,6 +11,12 @@ app.get("/", async (req, res) => {
   });
 });
 
+app.get("/raining",async(req,res)=>{
+  return res.status(200).json({
+    message:"there is raning outside!"
+  });
+});
+
 app.get("/weather", async (req, res) => {
   return res.status(200).json({
     message: "the weather is sunny!",

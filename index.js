@@ -1,0 +1,16 @@
+import express from "express";
+import cors from "cors";
+
+const app = express();
+
+const PORT = process.env.PORT || 8000;
+
+app.get("/", async (req, res) => {
+  return res.status(200).json({
+    message: "Server is spining!",
+  });
+});
+
+app.listen(PORT, async () => {
+  console.log("Server is Spining on Port :", PORT);
+});
